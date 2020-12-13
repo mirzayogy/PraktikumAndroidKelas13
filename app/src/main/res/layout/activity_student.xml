@@ -59,6 +59,13 @@
         android:text="Send with Intent Parcelable"
         />
 
+    <Button
+        android:id="@+id/btDial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Call"
+        />
+
 
 
 </LinearLayout>
