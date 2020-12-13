@@ -16,6 +16,7 @@ class StudentActivity : AppCompatActivity() {
         val etIpk = findViewById<EditText>(R.id.etIpk)
         val etPhoneNumber = findViewById<EditText>(R.id.etPhoneNumber)
         val btSend1 = findViewById<Button>(R.id.btSend1)
+        val btSend2 = findViewById<Button>(R.id.btSend2)
 
         btSend1.setOnClickListener {
 
@@ -24,12 +25,27 @@ class StudentActivity : AppCompatActivity() {
             val ipk = etIpk.text.toString().toDouble()
             val phoneNumber = etPhoneNumber.text.toString()
 
+
             val i = Intent(this, StudentResultActivity::class.java)
             i.putExtra("npm",npm)
             i.putExtra("name",name)
             i.putExtra("ipk",ipk)
             i.putExtra("phoneNumber",phoneNumber)
             startActivity(i)
+        }
+
+        btSend2.setOnClickListener {
+
+            val npm = etNpm.text.toString()
+            val name = etName.text.toString()
+            val ipk = etIpk.text.toString().toDouble()
+            val phoneNumber = etPhoneNumber.text.toString()
+
+            val student = Student(npm,name,ipk,phoneNumber)
+
+            val iParcelable = Intent(this,StudentResultActivity::class.java)
+            iParcelable.putExtra("student",student)
+            startActivity(iParcelable)
         }
 
 
