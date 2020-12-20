@@ -15,4 +15,5 @@
     <string name="send_with_intent">Send with Intent</string>
     <string name="send_with_intent_parcelable">Send with Intent Parcelable</string>
     <string name="call">Call</string>
+    <string name="language_option">Language option</string>
 </resources>
