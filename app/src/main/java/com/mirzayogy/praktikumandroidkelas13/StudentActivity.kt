@@ -55,7 +55,5 @@ class StudentActivity : AppCompatActivity() {
             val dialIntent = Intent(Intent.ACTION_DIAL,Uri.parse("tel:$phoneNumber"))
             startActivity(dialIntent)
         }
-
-
     }
 }
